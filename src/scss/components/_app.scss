@@ -1,0 +1,152 @@
+.app {
+  background: $light-pink-color;
+  padding: 40px 0 0;
+  font-family: $default-font;
+  color: $black;
+  text-align: center;
+
+  // 768px
+  @media (min-width: $tableWidth) {
+    padding: 30px 0 0;
+  }
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    
+    // 768px
+    @media (min-width: $tableWidth) {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+
+    // 768px
+    @media (min-width: $tableWidth) {
+      width: 65%;
+      text-align: left;
+    }
+
+    // 1115px
+    @media (min-width: $desktopWidth) {
+      width: 58%;
+    }
+  }
+
+  h3 {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 1.12121;
+    margin: 0 auto 15px auto;
+
+    @media (min-width: $phoneWidth) {
+      font-size: 32px;
+    }
+
+    // 768px
+    @media (min-width: $tableWidth) {
+      margin: 0 0 20px 0;
+      font-size: 38px;
+    }
+
+    // 1024px
+    @media (min-width: $smDesktopWidth) {
+      font-size: 44px;
+      line-height: 1.18181;
+    }
+  }
+
+  p {
+    letter-spacing: 0.01em;
+    opacity: .7;
+    margin-bottom: 20px;
+
+    // 1024px
+    @media (min-width: $smDesktopWidth) {
+      font-size: 18px;
+      line-height: 1.16666;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__features {
+    padding: 0;
+    text-align: left;
+    margin-bottom: 20px;
+    width: 100%;
+
+    // 768px
+    @media (min-width: $tableWidth) {
+      margin: 0 0 20px 0;
+    }
+
+    // 1024px
+    @media (min-width: $smDesktopWidth) {
+      margin: 0 0 40px 0;  
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+
+      // 1024px
+      @media (min-width: $smDesktopWidth) {
+        font-size: 22px;
+        line-height: 26px;  
+      }
+
+      & + li {
+        margin-top: 15px;
+      }
+    }
+
+    img {
+      display: inline-block;
+      margin-right: 10px;
+    }
+  }
+
+  &__markets {
+    margin: 0 auto;
+
+    // 768px
+    @media (min-width: $tableWidth) {
+      margin: 0;
+    }
+
+    // 1024px
+    @media (min-width: $smDesktopWidth) {
+      width: 100%;
+    }
+
+    img {
+      display: inline-block;
+    }
+
+    a + a {
+      @media (min-width: $tableWidth) {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  &__img {
+    width: 70%;
+    transform: translateY(10%);
+    margin: 0 auto;
+
+    @media (min-width: $phoneWidth) {
+      width: 50%;
+    }
+
+    // 768px
+    @media (min-width: $tableWidth) {
+      width: 30%;
+    }
+  }
+}

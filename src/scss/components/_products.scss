@@ -1,0 +1,341 @@
+.products {
+  padding: 40px 0;
+
+  // 768px
+  @media (min-width: $tableWidth) {
+    padding: 60px 0;
+  }
+  
+  // 1024px
+  @media (min-width: $smDesktopWidth) {
+    padding: 100px 0;
+  }
+
+  h3 {
+    font-family: $primary-font;
+    font-weight: 600;
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 15px;
+
+    // 768px
+    @media (min-width: $tableWidth) {
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+
+    // 1024px
+    @media (min-width: $smDesktopWidth) {
+      font-weight: 600;
+      font-size: 44px;
+      line-height: 1.36363;
+      margin-bottom: 65px;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-y: scroll;
+    justify-content: center;
+    padding: 0;
+    margin-bottom: 20px;
+
+    // 1024px
+    @media (min-width: $smDesktopWidth) {
+      margin-bottom: 50px;
+    }
+
+    li {
+      flex: 0 0 auto;
+      min-height: 40px;
+
+      & + li {
+        margin-left: 20px;
+
+        // 1115px
+        @media (min-width: $desktopWidth) {
+          margin-left: 40px;
+        }
+      }
+
+      a {
+        font-size: 20px;
+        opacity: .6;
+        transition: opacity .3s ease, border .3s ease;
+        padding-bottom: 4px;
+        border-bottom: 3px solid transparent;
+
+        // 768px
+        @media (min-width: $tableWidth) {
+          font-size: 16px;
+        }
+
+        // 1024px
+        @media (min-width: $smDesktopWidth) {
+          font-size: 18px;
+          line-height: 1.16666;
+        }
+
+        &:hover {
+          opacity: 1;
+          border-bottom: 3px solid $primary-color;
+        }
+      }
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    // 768px
+    @media (min-width: $tableWidth) {
+      justify-content: space-around;
+    }
+  }
+
+  &__img {
+    
+    // 1024px
+    @media (min-width: $smDesktopWidth) {
+      max-width: 50%;
+    }
+  }
+
+  &__item {
+    text-align: center;
+
+    // 480px
+    @media (min-width: $phoneWidth) {
+      max-width: 80%;
+    }
+
+    // 768px
+    @media (min-width: $tableWidth) {
+      width: 45%;
+    }
+
+    // 1024px
+    @media (min-width: $smDesktopWidth) {
+      min-width: 100%;
+      display: flex;
+      align-items: center;
+      text-align: left;
+      justify-content: space-between;
+    }
+
+    & + .products__item {
+      margin-top: 40px;
+
+      // 768px
+      @media (min-width: $tableWidth) {
+        margin: 0 0 40px 0;
+      }
+    }
+
+    img {
+      width: 100%;
+      
+      // 480px
+      @media (min-width: $phoneWidth) {
+        margin-bottom: 10px;
+      }
+    }
+
+    h4 {
+      font-family: $primary-font;
+      font-weight: 700;
+      font-size: 21px;
+      line-height: 1.2;
+      color: $black;
+      margin-bottom: 10px;
+
+      @media (min-width: $phoneWidth) {
+        font-size: 28px;
+        margin-bottom: 15px;
+      }
+
+      // 1024px
+      @media (min-width: $smDesktopWidth) {
+        font-size: 26px;
+        line-height: 1.38461;
+      }
+    }
+
+    p {
+      margin-bottom: 10px;
+      opacity: .7;
+
+      // 480px
+      @media (min-width: $phoneWidth) {
+        margin-bottom: 20px;
+      }
+
+      // 1024px
+      @media (min-width: $smDesktopWidth) {
+        font-size: 16px;
+        line-height: 1.5;
+        opacity: 0.7;
+      }
+    }
+
+    &.review {
+      margin-bottom: 20px;
+
+      
+      &.products__item--reverse {
+        // 1024px
+        @media (min-width: $smDesktopWidth) {
+          text-align: left;
+        }
+      }
+
+      .review__auth {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+
+        img {
+          max-width: 58px;
+          margin-right: 20px;
+        }
+
+        // 1024px
+        @media (min-width: $smDesktopWidth) {
+          justify-content: start;
+        }
+      }
+      
+      .review__auth-name {
+        text-align: left;
+        color: $black;
+        
+        strong {
+          display: block;
+          margin-bottom: 5px;
+          font-weight: 500;
+          font-size: 22px;
+          line-height: 1.16666;
+        }
+
+        span {
+          font-size: 12px;
+          line-height: 1.16666;
+        }
+      }
+
+      .review__comment {
+        position: relative;
+        font-size: 16px;
+        line-height: 1.5;
+        opacity: .7;
+      }
+
+      .review__slider {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        // 1024px
+        @media (min-width: $smDesktopWidth) {
+          justify-content: start;
+        }
+
+        img {
+          max-width: 35px;
+
+          & + img {
+            margin-left: 10px;
+          }
+
+          &:nth-child(2) {
+            max-width: 58px;
+            border: 1px solid $primary-color;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+
+    &--reverse {
+      flex-direction: row-reverse !important;
+
+      // 1024px
+      @media (min-width: $smDesktopWidth) {
+        text-align: right;
+      }
+    }
+  }
+
+  &__inner {
+    // 1024px
+    @media (min-width: $smDesktopWidth) {
+      width: 40%;
+    }
+  }
+
+  &__price {
+    font-family: $primary-font;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 1.28461;
+    color: $black;
+    margin-bottom: 10px;
+
+    // 1024px
+    @media (min-width: $smDesktopWidth) {
+      font-size: 26px;
+      line-height: 1.38461;
+    }
+
+    &--old {
+      position: relative;
+      font-size: 18px;
+      opacity: .7;
+
+      // 1024px
+      @media (min-width: $smDesktopWidth) {
+        font-size: 20px;
+        line-height: 1.4;
+      }
+      
+      &::after {
+        position: absolute;
+        content: '';
+        height: 1px;
+        width: 100%;
+        background: $black;
+        left: 0;
+        top: 50%;
+      }
+    }
+
+    span {
+      display: inline-block;
+    }
+
+    span + span {
+      margin-left: 5px;
+    }
+  }
+
+  &__btn {
+
+    &.btn {
+
+      // 1024px
+      @media (min-width: $smDesktopWidth) {
+        padding: 15px 50px;
+      }
+
+      &:hover {
+        background: $dark-color;
+        color: $white;
+      }
+    }
+  }
+}

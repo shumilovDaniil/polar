@@ -1,0 +1,100 @@
+.header {
+  background: #FBF0F4;
+  padding: 10px 0;
+
+  // 768px
+  @media (min-width: $tableWidth) {
+    padding: 20px 0;
+  } 
+
+  // 1024px
+  @media (min-width: $smDesktopWidth) {
+    padding: 10px 0 50px;
+  } 
+
+  // 1115px
+  @media (min-width: $desktopWidth) {
+    padding: 10px 0 40px;
+  }
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__list {
+    display: none;
+
+    // 768px
+    @media (min-width: $tableWidth) {
+      display: flex;
+    } 
+
+    li {
+      font-size: 14px;
+      line-height: 1.14285;
+      opacity: 0.6;
+      transition: color .3s ease, font-weigth .3s ease;
+
+      // 1024px
+      @media (min-width: $smDesktopWidth) {
+        font-size: 14px;
+        line-height: 1.14285;
+        color: #150101;
+      } 
+      
+      &:hover {
+        color: $primary-color;
+        font-weight: 700;
+      }
+
+      & + li {
+        margin-left: 40px;
+      }
+    }
+  }
+
+  &__link-active {
+    font-weight: 700;
+    color: $primary-color;
+  }
+
+  &__burger {
+    color: $primary-color;
+    transition: color .3s ease;
+
+    // 768px
+    @media (min-width: $tableWidth) {
+      display: none;
+    } 
+
+    &:before {
+      content: '\e900';
+      font-family: $icomoon;
+      font-size: 32px;
+      cursor: pointer;
+    }
+
+    &:hover {
+      color: $light-color;
+    }
+  }
+
+  &__btn.btn {
+    display: none;
+
+    // 1024px
+    @media (min-width: $smDesktopWidth) {
+      display: block;
+      font-family: $primary-font;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1.375;
+      color: #FAFAFA;
+      padding: 14px 50px;
+      border: 1px solid $primary-color;
+    } 
+  }
+}

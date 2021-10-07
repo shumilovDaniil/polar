@@ -1,0 +1,135 @@
+.footer {
+  background: $dark-color-2;
+  color: $white;
+  padding: 40px 0;
+
+  ul {
+    padding: 0;
+  }
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+
+    // 768px
+    @media (min-width: $tableWidth) {
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__info {
+
+    // 768px
+    @media (min-width: $tableWidth) {
+      width: 33.3333%;
+      padding-right: 30px;
+    }
+
+    // 1024px
+    @media (min-width: $smDesktopWidth) {
+      width: 20%;
+    }
+
+    img {
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 10px;
+      opacity: .7;
+    }
+
+    strong {
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__social {
+    display: flex;
+
+    li {
+      & + li {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  &__list {
+    width: 100%;
+    margin-bottom: 20px;
+
+    // 480px
+    @media (min-width: $phoneWidth) {
+      width: 50%;
+    }
+
+    // 768px
+    @media (min-width: $tableWidth) {
+      width: 33.3333%;
+    }
+
+    // 1024px
+    @media (min-width: $smDesktopWidth) {
+      width: 20%;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    a {
+      transition: opacity .3s ease;
+      opacity: .7;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__feedback {
+    width: 100%;
+
+    // 1024px
+    @media (min-width: $smDesktopWidth) {
+      width: 30%;
+    }
+
+    strong {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    &-form.form {
+      margin-bottom: 15px;
+
+      input {
+        width: 60%;
+        background: $dark-color-2;
+        border: 2px solid $primary-color-2;
+        color: $white;
+      }
+
+      button {
+        width: 40%;
+
+        &:hover {
+          background: $primary-color-2;
+        }
+      }
+    }
+  }
+
+  &__feedback-cards {
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      & + li {
+        margin-left: 15px;
+      }
+    }
+  }
+}

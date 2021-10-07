@@ -1,0 +1,63 @@
+@import 'base/*.scss';
+@import 'global/*.scss';
+@import '**/_*.scss';
+@import '../components/**/*.scss';
+
+body {
+  font-family: $default-font;
+  color: $dark-color;
+}
+
+.container {
+  max-width: 1155px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.btn {
+  display: inline-block;
+  background: $primary-color;
+  color: $light-color;
+  padding: 14px 30px;
+  border-radius: 5px;
+  transition: color .3s ease, background .3s ease;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.375;
+
+  &:hover {
+    background: $light-color;
+    color: $primary-color;
+  }
+}
+
+.form {
+  display: flex;
+
+  input {
+    background: $light-color;
+    color: #0F0000;
+    border-radius: 5px 0 0 5px;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 15px 10px;
+    border: none;
+    z-index: 0;
+    outline: none;
+    width: 70%;
+  }
+
+  &__btn.btn {
+    width: 30%;
+    padding: 14px 20px;
+    border-radius: 0 5px 5px 0;
+    border: none;
+    z-index: 5;
+    cursor: pointer;
+
+    &:hover {
+      background: $dark-color;
+      color: $white;
+    }
+  }
+}

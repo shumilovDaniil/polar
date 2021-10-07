@@ -1,0 +1,129 @@
+.main {
+  background: $pink-color;
+  font-family: $primary-font;
+  padding: 20px 0 40px;
+
+  // 1024px
+  @media (min-width: $smDesktopWidth) {
+    padding: 0 0 65px 0;
+  }
+
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    // 768px
+    @media (min-width: $tableWidth) {
+      justify-content: space-between;
+    }
+  }
+
+  &__content {
+    
+    // 768px
+    @media (min-width: $tableWidth) {
+      width: 50%;
+    }
+
+    // 1115px
+    @media (min-width: $desktopWidth) {
+      width: auto;
+      max-width: 540px;
+    }
+  }
+
+  strong {
+    margin-bottom: 10px;
+    display: inline-block;
+    font-family: $default-font;
+    letter-spacing: .05em;
+    font-size: 21px;
+
+    // 1024px
+    @media (min-width: $smDesktopWidth) {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.14285;
+      letter-spacing: 0.1em;
+      color: $dark-color;
+      margin-bottom: 6px;
+    }
+
+  }
+  h2 {
+    font-size: 32px;
+    font-family: $title-font;
+    line-height: 1.1;
+    font-weight: 400;
+    margin-bottom: 20px;
+
+    // 480px
+    @media (min-width: $phoneWidth) {
+      font-size: 38px;
+    }
+
+    // 1024px
+    @media (min-width: $smDesktopWidth) {
+      font-size: 42px;
+      line-height: 1.2;
+      margin-bottom: 35px;
+    }
+
+    // 1115px
+    @media (min-width: $desktopWidth) {
+      font-size: 57px;
+    }
+
+    span {
+      color: $primary-color;
+    }
+  }
+
+  p {
+    opacity: .6;
+    margin-bottom: 20px;
+    font-size: 18px;
+
+    // 480px
+    @media (min-width: $phoneWidth) {
+      margin-bottom: 25px;
+    }
+
+    // 1024px
+    @media (min-width: $smDesktopWidth) {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+  }
+
+  &__btn.btn {
+    margin: 0 auto;
+
+    // 1024px
+    @media (min-width: $smDesktopWidth) {
+      padding: 14px 50px;
+      border: 1px solid $primary-color;
+    }
+  }
+
+  &__img {
+    display: none;
+
+    @media (min-width: $tableWidth) {
+      display: inline-block;
+      width: 50%;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    // 1115px
+    @media (min-width: $desktopWidth) {
+      width: 100%;
+      max-width: 535px;
+    }
+  }
+}
